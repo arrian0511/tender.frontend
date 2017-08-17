@@ -1,0 +1,4 @@
+/* This file is already added in the app.module.ts which is considered as global to all components. */
+/* NOTE: Do not include it on each of your components since this will affect the processing time of the application. */
+@import 'core/base';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";

@@ -1,0 +1,42 @@
+@import '../../../styles/shared/base';
+
+.header-container {
+  @include display-flex(row);
+  justify-content: space-between;
+  align-items: center;
+  padding: $space-xsmall $space-large;
+  background-color: $color-grey-07;
+  border-bottom: 1px solid $color-grey-05;
+
+  .title {
+    @include set-items-interval($space-small, horizontal);
+    @include display-flex(row);
+    align-items: center;
+
+    span {
+      font-family: $circular-pro-bold;
+      @include font-size(18);
+    }
+  }
+
+  .user-panel {
+    @include set-items-interval($space-medium, horizontal);
+    @include display-flex(row);
+    align-items: center;
+
+    .item {
+      cursor: pointer;
+      @include set-items-interval($space-xsmall, horizontal);
+      @include display-flex(row);
+      align-items: center;
+
+      .blue {
+        color: $color-light-blue;
+      }
+
+      .red {
+        color: $color-red-00;
+      }
+    }
+  }
+}

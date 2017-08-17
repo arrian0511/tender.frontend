@@ -1,0 +1,25 @@
+@import '../../../styles/shared/base';
+
+.sidenav-container {
+  position: relative;
+  width: 230px;
+
+  .navigation-item {
+    @include display-flex(row);
+    @include set-items-interval($space-small, horizontal);
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+
+    border: 1px solid $color-grey-06;
+    padding: $space-xsmall;
+
+    &:hover,
+    &:focus,
+    &.active {
+      background-color: $color-navy-blue;
+      color: $color-white;
+      font-family: $circular-pro-bold;
+    }
+  }
+}
