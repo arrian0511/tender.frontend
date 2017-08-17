@@ -1,0 +1,15 @@
+@import '../styles/shared/base';
+
+.content-section {
+  @include display-flex(row);
+  @include set-items-interval($space-large, horizontal);
+  padding: $space-large;
+
+  layout-sidenav {
+    flex-grow: 0;
+  }
+
+  layout-content {
+    flex-grow: 1;
+  }
+}

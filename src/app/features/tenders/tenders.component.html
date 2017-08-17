@@ -1,0 +1,64 @@
+<section class="tenders-container">
+
+  <div class="tender-header">
+    <span class="title">Tender List</span>
+    <div class="action-panel">
+
+      <md-icon mdTooltip="Add tender" mdTooltipPosition="before">add</md-icon>
+    </div>
+  </div>
+
+  <div class="tender-lists">
+    <md-table #table [dataSource]="dataSource">
+
+      <!-- Requirements Column -->
+      <ng-container cdkColumnDef="requirements">
+        <md-header-cell *cdkHeaderCellDef> Requirements </md-header-cell>
+        <md-cell *cdkCellDef="let row">{{ row.requirements }}</md-cell>
+      </ng-container>
+
+      <!-- Start Date Column -->
+      <ng-container cdkColumnDef="startDate">
+        <md-header-cell *cdkHeaderCellDef> Start Date </md-header-cell>
+        <md-cell *cdkCellDef="let row">{{ row.startDate }}</md-cell>
+      </ng-container>
+
+      <!-- End Date Column -->
+      <ng-container cdkColumnDef="endDate">
+        <md-header-cell *cdkHeaderCellDef> End Date </md-header-cell>
+        <md-cell *cdkCellDef="let row">{{ row.endDate }}</md-cell>
+      </ng-container>
+
+      <!-- Current Bid Column -->
+      <ng-container cdkColumnDef="currentBid">
+        <md-header-cell *cdkHeaderCellDef>Current Bid</md-header-cell>
+        <md-cell *cdkCellDef="let row">{{ row.currentBid }}</md-cell>
+      </ng-container>
+
+      <!-- Final Bid Column -->
+      <ng-container cdkColumnDef="finalBid">
+        <md-header-cell *cdkHeaderCellDef>Final Bid</md-header-cell>
+        <md-cell *cdkCellDef="let row">{{ row.finalBid }}</md-cell>
+      </ng-container>
+
+      <!-- Action Column -->
+      <ng-container cdkColumnDef="action">
+          <md-header-cell *cdkHeaderCellDef></md-header-cell>
+          <md-cell *cdkCellDef="let row">
+            <md-icon mdTooltip="Edit" mdTooltipPosition="before">edit</md-icon>
+            <md-icon mdTooltip="Details" mdTooltipPosition="after">info</md-icon>
+          </md-cell>
+        </ng-container>
+
+      <md-header-row *cdkHeaderRowDef="dataColumns"></md-header-row>
+      <md-row *cdkRowDef="let row; columns: dataColumns;"></md-row>
+    </md-table>
+
+    <!-- <md-paginator #paginator
+      [length]="exampleDatabase.data.length"
+      [pageIndex]="0"
+      [pageSize]="25"
+      [pageSizeOptions]="[5, 10, 25, 100]">
+    </md-paginator> -->
+  </div>
+</section>

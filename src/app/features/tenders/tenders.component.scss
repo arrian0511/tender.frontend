@@ -1,0 +1,27 @@
+@import '../../../styles/shared/base';
+
+.tenders-container {
+  @include display-flex(column);
+  @include set-items-interval($space-medium);
+
+  md-icon {
+    cursor: pointer;
+  }
+
+  .tender-header {
+    color: $color-white;
+    background-color: $color-navy-blue;
+    border-radius: 2px;
+    padding: $space-small;
+    @include display-flex(row);
+    justify-content: space-between;
+
+    .action-panel {
+
+    }
+  }
+
+  .tender-lists {
+    box-shadow: 0 2px 5px rgba($color-black, 0.2);
+  }
+}
